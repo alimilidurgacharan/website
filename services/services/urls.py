@@ -22,4 +22,5 @@ from . import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('api/send-contact/', views.send_contact_details, name='send_contact_details'),
+    path('api/health-check/', views.health_check, name='health_check'),
 ]

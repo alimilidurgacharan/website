@@ -5,6 +5,10 @@ from django.core.mail import send_mail
 from django.conf import settings
 import re
 
+@api_view(['get'])
+def health_check(request):
+    return Response("hello world", status=status.HTTP_200_OK)
+
 @api_view(['post'])
 def send_contact_details(request):
     try:
